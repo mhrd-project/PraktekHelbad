@@ -14,7 +14,7 @@
         <!-- small box -->
         <div class="small-box bg-warning">
           <div class="inner">
-            <h3>1</h3>
+            <h3>{{ $data->barang }}</h3>
             <p>Data Barang</p>
           </div>
           <div class="icon">
@@ -26,7 +26,7 @@
         <!-- small box -->
         <div class="small-box bg-info">
           <div class="inner">
-            <h3>1</h3>
+            <h3>{{ $data->stok }}</h3>
             <p>Stok Barang</p>
           </div>
           <div class="icon">
@@ -39,9 +39,8 @@
         <!-- small box -->
         <div class="small-box bg-success">
           <div class="inner">
-            <h3>1</h3>
-
-            <p>Data Penjualan</p>
+            <h3>{{ $data->pembelian }}</h3>
+            <p>Data Pembelian</p>
           </div>
           <div class="icon">
             <i class="fas fa-fw fa-poll-h"></i>
@@ -53,12 +52,11 @@
         <!-- small box -->
         <div class="small-box bg-danger">
           <div class="inner">
-            <h3>Rp. {{str_replace(',', '.', number_format(1000))}},00</h3>
-
-            <p>Laba Bersih</p>
+            <h3>{{ $data->penjualan }}</h3>
+            <p>Data Penjualan</p>
           </div>
           <div class="icon">
-            <i class="ion ion-pie-graph"></i>
+            <i class="fas fa-fw fa-poll-h"></i>
           </div>
         </div>
       </div>

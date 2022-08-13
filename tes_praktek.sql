@@ -1,31 +1,24 @@
--- phpMyAdmin SQL Dump
--- version 5.0.2
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Generation Time: Aug 13, 2022 at 06:33 AM
--- Server version: 10.4.13-MariaDB
--- PHP Version: 7.4.7
+/*
+SQLyog Professional v12.5.1 (64 bit)
+MySQL - 5.7.33 : Database - praktek-hilmi
+*********************************************************************
+*/
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
+/*!40101 SET NAMES utf8 */;
 
+/*!40101 SET SQL_MODE=''*/;
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`praktek-hilmi` /*!40100 DEFAULT CHARACTER SET latin1 */;
 
---
--- Database: `tes_praktek`
---
+USE `praktek-hilmi`;
 
--- --------------------------------------------------------
+/*Table structure for table `barang` */
 
---
--- Table structure for table `barang`
---
+DROP TABLE IF EXISTS `barang`;
 
 CREATE TABLE `barang` (
   `id` char(5) NOT NULL,
@@ -34,11 +27,22 @@ CREATE TABLE `barang` (
   `stok` char(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- --------------------------------------------------------
+/*Table structure for table `transaksi` */
 
---
--- Table structure for table `user`
---
+DROP TABLE IF EXISTS `transaksi`;
+
+CREATE TABLE `transaksi` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_barang` int(11) NOT NULL,
+  `jumlah` int(11) DEFAULT NULL,
+  `kategori` varchar(50) DEFAULT NULL,
+  `tanggal` date DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+
+/*Table structure for table `user` */
+
+DROP TABLE IF EXISTS `user`;
 
 CREATE TABLE `user` (
   `id_user` char(5) DEFAULT NULL,
@@ -46,14 +50,7 @@ CREATE TABLE `user` (
   `password` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `user`
---
-
-INSERT INTO `user` (`id_user`, `username`, `password`) VALUES
-('1', 'Jancok', '123');
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
