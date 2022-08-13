@@ -11,10 +11,10 @@
         <div class="form-container">
             <div class="form-body">
                 <h2 class="title">Login</h2>
-                <form action="" class="the-form">
-
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" placeholder="Enter your email">
+                <form action="{{ url('login') }}" method="post" class="the-form">
+                    @csrf
+                    <label for="email">Username</label>
+                    <input type="text" name="username" id="email" placeholder="Enter your username">
 
                     <label for="password">Password</label>
                     <input type="password" name="password" id="password" placeholder="Enter your password">
