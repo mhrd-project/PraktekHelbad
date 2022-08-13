@@ -37,6 +37,8 @@
                                     placeholder="Stok Barang"
                                     step="any"
                                     autocomplete="off"
+                                    value=1
+                                    stok=1
                                     required
                                 />
                             </div>

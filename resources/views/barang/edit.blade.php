@@ -40,6 +40,7 @@
                                     step="any"
                                     autocomplete="off"
                                     value="{{ $data->stok }}"
+                                    min=1
                                     required
                                 />
                             </div>

@@ -2,17 +2,17 @@
 @section('title','Slip Pembelian')
 @section('home-href')
 {{ url("pembelian") }}
-@endsection @section('home', 'Pembelian') @section('breadcrumb','Slip Pembelian')
+@endsection @section('home','Pembelian') @section('breadcrumb','Slip Pembelian')
 @section('content')
 <section class="content">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6">
-                <!-- general form elements -->
                 <div class="card card-primary">
                     <div class="card-header">
                         <h3 class="card-title">Slip Pembelian</h3>
                     </div>
+
                     <div class="card-body">
                         <div class="form-group">
                             <label for="id">ID Pembelian</label>
@@ -24,6 +24,7 @@
                                 readonly
                             />
                         </div>
+                    
                         <div class="form-group">
                             <label for="id">Nama Barang</label>
                             <input
@@ -34,6 +35,7 @@
                                 readonly
                             />
                         </div>
+                    
                         <div class="form-group">
                             <label for="id">Jumlah Pembelian</label>
                             <input
@@ -44,6 +46,7 @@
                                 readonly
                             />
                         </div>
+                    
                         <div class="form-group">
                             <label for="id">Harga Satuan</label>
                             <input
@@ -54,6 +57,7 @@
                                 readonly
                             />
                         </div>
+
                         <div class="form-group">
                             <label for="id">Harga Total</label>
                             <input
@@ -65,15 +69,12 @@
                             />
                         </div>
                     </div>
-                    <!-- /.card-body -->
                 </div>
-                <!-- /.card -->
             </div>
-            <!-- /.row -->
         </div>
-        <!-- /.container-fluid -->
     </div>
 </section>
+
 @endsection @section('extra_javascript')
 <script>
     $(document).ready(function (){

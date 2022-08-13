@@ -7,17 +7,11 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6">
-                <!-- general form elements -->
                 <div class="card card-primary">
                     <div class="card-header">
                         <h3 class="card-title">Tambah Penjualan</h3>
                     </div>
-                    <!-- /.card-header -->
-                    <!-- form start -->
-                    <form
-                        method="post"
-                        action="{{ url('/penjualan') }}"
-                    >
+                    <form method="post" action="{{ url('/penjualan') }}">
                     @csrf
                         <div class="card-body">
                             <div class="form-group">
@@ -38,6 +32,8 @@
                                     placeholder="Jumlah Barang"
                                     step="any"
                                     autocomplete="off"
+                                    value=1
+                                    min=1
                                     required
                                 />
                             </div>

@@ -31,7 +31,6 @@
       </div>
       @yield('content')
     </div>
-    @include('layouts.footer')
     <aside class="control-sidebar control-sidebar-dark"></aside>
   </div>
 </body>
