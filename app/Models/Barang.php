@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Barang extends Model
 {
-    private $table = 'barang';
+    protected $table = 'barang';
 
-    private $timestamps = false;
+    public $timestamps = false;
 }

@@ -18,13 +18,15 @@ class LoginController extends Controller
             $model = $model->where('password', $password)->first();
 
             if($model){
-                echo "berhasil login";
+                return redirect('dashboard');
             }
             else{
-                echo "password salah";
+                session()->flash('warning', 'Password salah');
+                return redirect('/');
             }
         }else{
-            echo "username salah";
+            session()->flash('warning', 'Username salah');
+            return redirect('/');
         }
     }
 }
