@@ -1,78 +1,78 @@
 body {
-  margin: 0;
-  padding: 0;
-  background-color: #56385a;
-  background-image: url("image/background.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  padding: 20px;
-  overflow-x: hidden;
+    background-image: url("image/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 20px;
+    overflow-x: hidden;
 }
 
 body, input, button {
-  font-family: "Muli", sans-serif, -apple-system, BlinkMacSystemFont,
-    "Helvetica Neue", Helvetica, sans-serif;
-  outline: none;
+    font-family: sans-serif;
+    outline: none;
 }
 
 .form-container {
-  max-width: 500px;
-  margin: 0 auto;
+    max-width: 500px;
+    margin: auto;
+    margin-top: 7%;
 }
 
 .form-body {
-  background-color: #a7473a;
-  overflow: hidden;
-  padding: 50px;
-  color: #ffffff;
-  border-radius: 3px;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    background-color: #1dbfdc;
+    overflow: hidden;
+    padding: 50px;
+    color: black;
+    border-radius: 3px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 .form-body .title {
-  margin: 0;
-  text-align: center;
-  font-weight: normal;
+    margin: 0;
+    text-align: center;
+    font-weight: bold;
 }
 
 .the-form {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .the-form label {
     margin-top: 15px;
-  margin-bottom: 5px;
-  color: #e6e6e6;
-  font-weight: bold;
+    margin-bottom: 5px;
+    color: black;
+    font-weight: bold;
 }
 
-.the-form [type="text"],
-.the-form [type="password"] {
-  padding: 15px;
-  font-size: 16px;
-  background: rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 3px;
-  margin-bottom: 15px;
-  color: #e6e6e6;
+.the-form [type="username"], .the-form [type="password"] {
+    padding: 15px;
+    font-size: 16px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    color: white;
 }
 
-.the-form [type="submit"] {
-  background: #ffb37b;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 18px;
-  font-size: 20px;
-  border-radius: 3px;
-  cursor: pointer;
-  margin-top: 20px;
-  color: black;
+.the-form [type="username"]::-webkit-input-placeholder,
+.the-form [type="password"]::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
 }
 
-.the-form [type="submit"]:hover {
-  opacity: 0.9;
+.the-form [type="masuk"] {
+    background: #ff6333;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 30px;
+    color: black;
+}
+
+.the-form [type="masuk"]:hover {
+    opacity: 0.9;
 }
